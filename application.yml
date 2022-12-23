@@ -6,22 +6,22 @@ metadata:
 spec:
   project: default
   source:
-    repo: https://github.com/MarcBuch/kubernetes-lab.git
-    // The last commit
+    repoURL: https://github.com/MarcBuch/kubernetes-lab.git
+    # The last commit
     targetRevision: HEAD
     path: app
   destination:
-    // Internal name of the Kubernetes API
+    # Internal name of the Kubernetes API
     server: https://kubernetes.default.svc
     namespace: myapp
-  
+
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
 
-    // Automatically poll every 3 minutes
+    # Automatically poll every 3 minutes
     automated:
-      // ArgoCD should overwrite manual changes
+      # ArgoCD should overwrite manual changes
       selfHeal: true
-      // Also delete
+      # Also delete
       prune: true
