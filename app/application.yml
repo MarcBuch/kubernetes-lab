@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repo: github.com
+    repo: https://github.com/MarcBuch/kubernetes-lab.git
     // The last commit
     targetRevision: HEAD
     path: app
