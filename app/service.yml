@@ -5,10 +5,11 @@ metadata:
   labels:
     apps: guestbook-ui
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
-    - port: 5000
+    - port: 80
       targetPort: 80
+      nodePort: 5000
       name: guestbook-ui
   selector:
     app: guestbook-ui
